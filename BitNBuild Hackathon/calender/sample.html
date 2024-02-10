@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect</title>
+    <link rel="stylesheet" href="sample.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+  <script src="sample.js"></script>
+    <div class="calendar">
+        <div class="col leftCol">
+          <div class="content">
+            <h1 class="event" style="text-align: center;">EVENT</h1>
+            <div class="notes">
+              <p>
+                <input type="text" value="" placeholder="new note"/>
+                <a href="#" title="Add note" class="addNote animate">+</a>
+              </p>
+              <ul class="noteList">
+                <li>Headbutt a lion<a href="#" title="Remove note" class="removeNote animate">x</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col rightCol">
+        <div class="content">
+          <header>
+            <div class="date">
+                
+                <span class="dmy">10th February 2024</span>
+            </div>
+            <div class="icons">
+                <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                <span id="next" class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </header>
+          
+          <div class="clearfix"></div>
+          <ul class="weekday">
+            <li><a href="#" title="Mon" data-value="1">Mon</a></li>
+            <li><a href="#" title="Tue" data-value="2">Tue</a></li>
+            <li><a href="#" title="Wed" data-value="3">Wed</a></li>
+            <li><a href="#" title="Thu" data-value="4">Thu</a></li>
+            <li><a href="#" title="Fri" data-value="5">Fri</a></li>
+            <li><a href="#" title="Say" data-value="6">Sat</a></li>
+            <li><a href="#" title="Sun" data-value="7">Sun</a></li>
+          </ul>
+          <div class="clearfix"></div>
+          <ul class="days">
+            <script>
+              for( var _i = 1; _i <= 31; _i += 1 ){
+                var _addClass = '';
+                if( _i === 12 ){ _addClass = ' class="selected"'; }
+                
+                switch( _i ){
+                  case 8:
+                  case 10:
+                  case 27:
+                    _addClass = ' class="event"';
+                  break;
+                }
+
+                document.write( '<li><a href="#" title="'+_i+'" data-value="'+_i+'"'+_addClass+'>'+_i+'</a></li>' );
+              }
+            </script>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+      
+
+    </div>
+</body>
+</html>
