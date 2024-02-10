@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta user-scalable=no name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CampusConnect</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const preloader = document.querySelector('.preloader');
+
+    preloader.style.display = 'flex';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
+});
+    </script>
+    <nav>
+        <div class="logo">
+            
+                <!-- <div class="image">
+                   <strong>cc</strong>
+                </div> -->
+                <div class="text" id="#tile">
+                    <strong>CampusConnect</strong>
+                </div>
+            
+        </div>
+            <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#products">Upcoming Events</a>
+            <a href="#products">Clubs</a>
+            <a href="#blog">FAQs</a>
+            <a href="#about">Contact Us</a>
+            <a href="login.html">
+                <div class="login"><strong>LOGIN</strong></div>
+            </a>
+        </div>
+        <!-- <a href="login.html">
+            <div class="login"><strong>LOGIN</strong></div>
+        </a> -->
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <script>
+            const hamburgerMenu = document.querySelector(".hamburger-menu");
+                const navLinks = document.querySelector(".nav-links");
+                
+                hamburgerMenu.addEventListener("click", () => {
+                    navLinks.classList.toggle("active");
+                });
+    
+        </script>
+    </nav>
+    <section class="hero" id="hero">
+        <h1 id="hero-head"><strong> Welcome to CampusConnect</strong></h1>
+        <p>Discover a world of peace and harmony.</p>
+        <!-- <a href="#about" class="btn">Learn More</a> -->
+    </section>
+    
+    <section class="hero" id="articles">
+        <h1>Clubs</h1>
+        <p>Discover a world of peace and harmony.</p>
+        <div class="mega-gal" id="mega-clubs">
+            <div class="gallery" id="clubs">
+              <img src="https://placehold.co/00" alt="Club 1">
+              <p>Club 1</p>
+            </div>
+            <div class="gallery" id="clubs">
+              <img src="https://placehold.co/00" alt="Club 2">
+              <p>Club 2</p>
+            </div>
+            <div class="gallery" id="clubs">
+              <img src="https://placehold.co/00" alt="Club 3">
+              <p>Club 3</p>
+            </div>
+            <div class="gallery" id="clubs">
+              <img src="https://placehold.co/00" alt="Club 4">
+              <p>Club 4</p>
+            </div>
+            <div class="gallery" id="clubs">
+                <img src="https://placehold.co/00" alt="Club 5">
+                <p>Club 5</p>
+              </div>
+          </div>
+    </section>
+    
+    <section class="hero" id="gallery">
+        <h1>Upcoming Events</h1>
+        <p>Discover a world of peace and harmony.</p>
+        <div class="mega-gal">
+        <div class="gallery">
+              <img src="https://placehold.co/700" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="text">
+                <div class="desc"><strong>Event 1</strong></div><div class="reg">Register&rarr;</div>
+            </div>          </div>
+          
+          <div class="gallery">
+              <img src="https://placehold.co/700" alt="Forest" width="600" height="400">
+            </a>
+            <div class="text">
+                <div class="desc"><strong>Event 2</strong></div><div class="reg">Register&rarr;</div>
+            </div>          </div>
+          
+          <div class="gallery">
+            <img src="https://placehold.co/700" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="text">
+            <div class="desc"><strong>Event 3</strong></div><div class="reg">Register&rarr;</div>
+        </div>
+          </div>
+          
+          <div class="gallery">
+              <img src="https://placehold.co/700" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="text">
+                <div class="desc"><strong>Event 4</strong></div><div class="reg">Register&rarr;</div>
+            </div>          </div>
+          </div>
+
+    </section>
+    <section class="hero" id="accordion">
+    <div class="accordion">
+        <h1>Frequently Asked Questions</h1>
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion1">
+            <label for="accordion1" class="accordion-item-title"><span class="icon"></span>What is SEO, and why is it important for online businesses?</label>
+            <div class="accordion-item-desc">SEO, or Search Engine Optimization, is the practice of optimizing a website to improve its visibility on search engines like Google. It involves various techniques to enhance a site's ranking in search results. SEO is crucial for online businesses as it helps drive organic traffic, increases visibility, and ultimately leads to higher conversions.</div>
+        </div>
+    
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion2">
+            <label for="accordion2" class="accordion-item-title"><span class="icon"></span>How long does it take to see results from SEO efforts?</label>
+            <div class="accordion-item-desc">The timeline for seeing results from SEO can vary based on several factors, such as the competitiveness of keywords, the current state of the website, and the effectiveness of the SEO strategy. Generally, it may take several weeks to months before noticeable improvements occur. However, long-term commitment to SEO is essential for sustained success.</div>
+        </div>
+    
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion3">
+            <label for="accordion3" class="accordion-item-title"><span class="icon"></span>What are the key components of a successful SEO strategy?</label>
+            <div class="accordion-item-desc">A successful SEO strategy involves various components, including keyword research, on-page optimization, quality content creation, link building, technical SEO, and user experience optimization. These elements work together to improve a website's relevance and authority in the eyes of search engines.</div>
+        </div>
+    
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion4">
+            <label for="accordion4" class="accordion-item-title"><span class="icon"></span>How does mobile optimization impact SEO?</label>
+            <div class="accordion-item-desc">Mobile optimization is crucial for SEO because search engines prioritize mobile-friendly websites. With the increasing use of smartphones, search engines like Google consider mobile responsiveness as a ranking factor. Websites that provide a seamless experience on mobile devices are more likely to rank higher in search results.</div>
+        </div>
+    
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion5">
+            <label for="accordion5" class="accordion-item-title"><span class="icon"></span>What is the role of backlinks in SEO, and how can they be acquired?</label>
+            <div class="accordion-item-desc">Backlinks, or inbound links from other websites to yours, play a significant role in SEO. They are considered a vote of confidence and can improve a site's authority. Quality over quantity is crucial when acquiring backlinks. Strategies for obtaining backlinks include creating high-quality content, guest posting, reaching out to industry influencers, and participating in community activities. It's important to focus on natural and ethical link-building practices.</div>
+        </div>
+    
+    </div>
+</section>
+
+    <footer>By Team - CtrlAltSucceed
+    </footer>
+    </body>
+    </html>
+
+    
+
+    
