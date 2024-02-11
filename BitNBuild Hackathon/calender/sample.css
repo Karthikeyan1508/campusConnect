@@ -94,7 +94,7 @@ header .date {
     }
 
     .icons span:last-child {
-        margin-left: 10px; /* Adjust as needed for proper spacing */
+        margin-left: 10px; 
     }
 
   header .icons span:hover{
@@ -268,14 +268,40 @@ header .date {
     transition: background-color 0.3s, color 0.3s; 
 }
   
-  .calendar .days li .selected{
-    background-color: #F5A1A3!important;
-    color: #ffffff;
-  }
+  /* Your existing CSS styles go here */
+
+.calendar .days li.selected {
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.calendar .days li.note-added {
+  background-color: #F5A1A3!important;
+  color: #ffffff;
+}
+
   
   .calendar .days li .event{
     color: #F5A1A3;
   }
+  
+  /* Style for special dates */
+.special-date a {
+  background-color: #F5A1A3;
+  color: #ffffff;
+}
+
+/* Style for selected dates */
+.days li.selected a {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Style for notes */
+.note-added {
+  background-color: #ffc107;
+}
+
   
   
   /* placeholder color */

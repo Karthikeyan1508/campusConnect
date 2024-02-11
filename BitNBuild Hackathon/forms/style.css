@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300&display=swap');
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0e0e0e;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100vh;
+}
+
+
+*{
+  font-family: 'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
+  color: white; 
+
+}
+form {
+  background-color: #171717;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 500px;
+  margin-top: 20px;
+}
+a{
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 4px;
+}
+select:hover,
+select:focus {
+  background-color: #171717; /* Background color when hovered or focused */
+}
+
+textarea {
+  resize: none; /* Disable textarea resizing */
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.alert {
+  display: none;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 4px;
+}

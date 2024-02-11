@@ -1,0 +1,127 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Registration Form</title>
+  </head>
+  
+  <body>
+    
+
+    <form action="" method="POST" id="registrationform">
+      <h1>Register</h1>
+      <div class="alert">Form Submitted Successfully</div>
+      
+      <!-- Section 1 -->
+      <fieldset>
+        <legend><span class="section"></span>Your Basic Info</legend>
+        <label class="" for="name">Name:</label>
+        <input type="text" name="name" value="" id="name" required />
+  
+        <label class="" for="email">Email:</label>
+        <input type="email" name="email" value="" id="email" required />
+  
+        <!-- <label for="password">Password:</label>
+        <input type="password" name="password" value="" id="password" required /> -->
+      </fieldset>
+  
+      <!-- section 2 -->
+      <fieldset>
+        <legend><span class="section"></span>Profile</legend>
+        <label class="" for="bio">Bio:</label>
+        <textarea name="bio" id="bio" required></textarea>
+  
+        <label for="job">Job Role:</label>
+        <select name="job" id="job" required>
+          <optgroup label="Web">
+            <option value="front_end_developer">Frontend Developer</option>
+            <option value="back_end_developer">Backend Developer</option>
+            <option value="fullstack_developer">Fullstack Developer</option>
+          </optgroup>
+          <optgroup label="Mobile">
+            <option value="android">Android</option>
+            <option value="ionic">Ionic</option>
+            <option value="phonegap">PhoneGap</option>
+          </optgroup>
+        </select>
+        <br /><br />
+        <label>Interest:</label>
+  
+        <select id="interest" required>
+          <option value="development">Development</option>
+          <option value="design">Design</option>
+          <option value="business">Business</option>
+        </select>
+  
+        <button type="submit" sendMessage()>Register</button>
+        <a href="../../clubevents3/clubevent3.html">&larr;Back</a>
+    </form>
+  
+     <script type="module">
+  
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"; 
+      const firebaseConfig = {
+    apiKey: "AIzaSyCpF9AsmNEsvW3WGX2y0fygtyj1AH_DOXg",
+    authDomain: "campus-connect-auth.firebaseapp.com",
+    databaseURL: "https://campus-connect-auth-default-rtdb.firebaseio.com",
+    projectId: "campus-connect-auth",
+    storageBucket: "campus-connect-auth.appspot.com",
+    messagingSenderId: "1086025866959",
+    appId: "1:1086025866959:web:decd017d390b4e28a621ba"
+  };
+        // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+  
+     
+  
+      document
+        .getElementById('registrationform')
+        .addEventListener('submit', formSubmit);
+  
+ 
+      function formSubmit(e) {
+        e.preventDefault();
+        
+        let name = document.querySelector('#name').value;
+        let email = document.querySelector('#email').value;
+        // let password = document.querySelector('#password').value;
+        let bio = document.querySelector('#bio').value;
+        let job = document.querySelector('#job').value;
+        let interest = document.querySelector('#interest').value;
+  
+      
+        sendMessage(name, email, bio, job, interest);
+      }
+  
+     
+      function sendMessage(name, email,  bio, job, interest) {
+        const database = getDatabase();
+  
+        set(ref(database, 'event3/' + Math.floor(Math.random() * 10000000)), {
+          name: name,
+          email: email,
+          // password: password,
+          bio: bio,
+          job: job,
+          Interest: interest
+        }).then(() => {
+            
+         document.querySelector('.alert').style.display = 'block';
+         
+         setTimeout(function () {
+         document.querySelector('.alert').style.display = 'none';
+         }, 7000);
+         document.getElementById('registrationform').reset();
+         alert("Registration successful"); // Add this line for console alert
+
+        }).catch((error) => {
+          alert(error)
+        })
+      }
+    </script>
+  </body>
+  
+  </html>
+  
